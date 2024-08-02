@@ -1,0 +1,73 @@
+<!-- <div>{{title}}</div> -->
+
+<!-- <app-header [child]="val"></app-header> -->
+
+ <div [style]="{backgroundColor: 'pink'}">data from child to parent: {{msg}}</div> 
+
+<app-header (customeve)="msg=$event"></app-header> 
+<!-- 
+<H1 *ngIf ="!data" else sample>Loading..........</H1>
+<div #sample *ngFor="let e of data">{{e}}dfggrfdf</div> -->
+
+<!-- <H1 *ngIf ="!data; else sample">Loading..........</H1> -->
+<!-- <ng-template #sample>{{data}} nvfghhh</ng-template> -->
+
+<p *ngFor = "let ele of arr; index as i">paragrapgh {{ele}} at index {{i+1}}</p>
+
+<table border="1">
+<tr>
+    <td>Content</td>
+    <td>Index</td>
+    <td>Even</td>
+    <td>Odd</td>
+    <td>First</td>
+    <td>Last</td>
+
+</tr>
+
+    <tr *ngFor="let ele of arr; index as i;even as e;odd as o;first as f;last as l">
+<td>This is row</td>
+<td>{{i}}</td>
+<td>{{e}}</td>
+<td>{{o}}</td>
+<td>{{f}}</td>
+<td>{{l}}</td>
+
+    </tr>
+</table>
+
+<div *ngFor="let s of student; index as i">{{s.id}}
+    {{s.name}}
+    {{s.sec}}
+</div>
+
+<input type="text" [(ngModel)]="op"/>
+<div [ngSwitch]="op">
+    <div *ngSwitchCase="'+'">{{num1+num2}}</div> 
+    <div *ngSwitchCase="'-'">{{num1-num2}}</div> 
+    <div *ngSwitchCase="'*'">{{num1*num2}}</div> 
+    <div *ngSwitchCase="'/'">{{num1/num2}}</div> 
+    <div *ngSwitchDefault>{{num2%num1}}</div>
+</div>
+
+<app-event></app-event>
+
+<div *ngFor="let ele of arr">{{ele}}</div>
+
+<h1>{{student | json}}</h1>
+
+<app-parent></app-parent>
+
+<h3>{{wish | test :'param1':'param2'}}</h3>
+
+
+<input type="text" (input)="update($event)"/>
+<button [disabled]="vari">click</button>
+
+<div [ngStyle]="{'border':'2px solid blue'}">Hiiii... Welcome to Miracle Software Systems</div>
+
+<div [ngStyle]="styles">Hiiii... Welcome to Miracle Software Systems</div>
+
+<div>{{address.city}}
+    {{address.location}}
+</div>

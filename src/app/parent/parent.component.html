@@ -1,0 +1,7 @@
+<div>
+<p>parent works!</p>
+
+<app-child [parent]="name" (custom)="newdata=($event)"></app-child>
+</div>
+
+<h1>{{newdata}}</h1>
